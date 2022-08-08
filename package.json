@@ -1,19 +1,21 @@
 {
   "name": "av-plugin-projectm",
-  "version": "0.0.1-development",
+  "version": "1.0.0-development",
   "description": "A module to provide controls for the ProjectM library",
-  "main": "./lib/src/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.m.js",
+  "unpkg": "lib/index.umd.js",
+  "types": "lib/index.d.js",
   "files": [
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build:all": "rm -rf ./library/build && ./scripts/build.sh && rm -rf ./src/avPluginProjectMLibrary.js && cp ./library/build/avPluginProjectMLibrary.js ./src/avPluginProjectMLibrary.js && yarn build",
+    "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
     "semantic-release": "semantic-release",
-    "test:watch": "jest --watch",
-    "test": "jest --coverage",
     "typecheck": "tsc --noEmit"
   },
   "repository": {
@@ -54,11 +56,10 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "jest": "^27.2.0",
     "lint-staged": "^10.5.4",
+    "microbundle": "^0.15.0",
     "prettier": "^2.2.1",
     "semantic-release": "^19.0.2",
-    "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.2.4"
   },
