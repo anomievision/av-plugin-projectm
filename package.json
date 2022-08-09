@@ -10,13 +10,15 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build:all": "rm -rf ./library/build && ./scripts/build.sh && rm -rf ./src/avPluginProjectMLibrary.js && cp ./library/build/avPluginProjectMLibrary.js ./src/avPluginProjectMLibrary.js && yarn build",
+    "build:all": "./scripts/build.sh",
+    "build:library": "cd ./library && ./scripts/build.sh",
     "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
     "semantic-release": "semantic-release",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "./test/test.sh"
   },
   "repository": {
     "type": "git",
