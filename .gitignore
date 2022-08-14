@@ -116,7 +116,6 @@ dist
 .pnp.*
 
 # Compiled code
-lib/
-
-# Docs *temporary*
-docs
+/lib
+/docs
+/test/lib

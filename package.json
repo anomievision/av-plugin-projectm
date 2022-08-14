@@ -22,13 +22,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnomieVision/av-plugin-projectm.git"
+    "url": "git+https://github.com/anomievision/av-plugin-projectm.git"
   },
   "license": "MIT",
   "author": {
     "name": "AnomieVision",
-    "email": "AnomieVision@users.noreply.github.com",
-    "url": "https://github.com/AnomieVision"
+    "email": "anomievision@users.noreply.github.com",
+    "url": "https://github.com/anomievision"
   },
   "engines": {
     "node": ">=12.0"
@@ -43,9 +43,9 @@
     "codecov"
   ],
   "bugs": {
-    "url": "https://github.com/AnomieVision/av-plugin-projectm/issues"
+    "url": "https://github.com/anomievision/av-plugin-projectm/issues"
   },
-  "homepage": "https://github.com/AnomieVision/av-plugin-projectm#readme",
+  "homepage": "https://github.com/anomievision/av-plugin-projectm#readme",
   "devDependencies": {
     "@ryansonshine/commitizen": "^4.2.8",
     "@ryansonshine/cz-conventional-changelog": "^3.3.4",
@@ -63,6 +63,8 @@
     "prettier": "^2.2.1",
     "semantic-release": "^19.0.2",
     "ts-node": "^10.2.1",
+    "typedoc": "^0.23.10",
+    "typedoc-plugin-markdown": "^3.13.4",
     "typescript": "^4.2.4"
   },
   "config": {
