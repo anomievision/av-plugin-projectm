@@ -120,3 +120,4 @@ dist
 # Compiled code
 /docs
 /test
+/lib
