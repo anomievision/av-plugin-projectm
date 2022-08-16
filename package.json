@@ -10,15 +10,13 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build:all": "./scripts/build-debug.sh",
-    "build:library": "cd ./wasm && ./scripts/build-debug.sh",
     "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
     "semantic-release": "semantic-release",
     "typecheck": "tsc --noEmit",
-    "test": "./test/test.sh"
+    "test": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap"
   },
   "repository": {
     "type": "git",
