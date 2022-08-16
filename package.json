@@ -1,6 +1,6 @@
 {
   "name": "av-plugin-projectm",
-  "version": "1.0.0-development",
+  "version": "0.0.0-development",
   "description": "A module to provide controls for the ProjectM library",
   "main": "lib/index.js",
   "module": "lib/index.m.js",
@@ -13,14 +13,15 @@
     "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
+    "commit": "git-cz",
     "lint": "eslint ./src/ --fix",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release --branches master",
     "typecheck": "tsc --noEmit",
     "test": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anomievision/av-plugin-projectm.git"
+    "url": "https://github.com/anomievision/av-plugin-projectm.git"
   },
   "license": "MIT",
   "author": {
@@ -59,7 +60,7 @@
     "lint-staged": "^10.5.4",
     "microbundle": "^0.15.0",
     "prettier": "^2.2.1",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "^19.0.3",
     "ts-node": "^10.2.1",
     "typedoc": "^0.23.10",
     "typedoc-plugin-markdown": "^3.13.4",
