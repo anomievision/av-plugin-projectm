@@ -118,6 +118,5 @@ dist
 .env 
 
 # Compiled code
-/lib
 /docs
-/test/lib
+/test
