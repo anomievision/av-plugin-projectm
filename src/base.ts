@@ -1,4 +1,4 @@
-import initModule from './avPluginProjectMLibrary';
+import initModule from './avPluginProjectMWASM';
 // import initEyetunes from './presets-eyetune';
 import { checkIfEmpty, sleep } from './lib/utils';
 

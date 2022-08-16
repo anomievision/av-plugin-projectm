@@ -10,8 +10,8 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build:all": "./scripts/build.sh",
-    "build:library": "cd ./library && ./scripts/build.sh",
+    "build:all": "./scripts/build-debug.sh",
+    "build:library": "cd ./wasm && ./scripts/build-debug.sh",
     "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
