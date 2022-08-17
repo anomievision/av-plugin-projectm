@@ -10,10 +10,13 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json --no-sourcemap",
+    "build:all": "./scripts/build-debug.sh",
+    "build:wasm": "cd wasm && ./scripts/build-debug.sh && cd ..",
+    "build": "rm -rf ./lib/ && microbundle --tsconfig tsconfig.json",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "commit": "git-cz",
+    "init-submodule": "git submodule update --init --recursive",
     "lint": "eslint ./src/ --fix",
     "semantic-release": "semantic-release --branches master",
     "typecheck": "tsc --noEmit",
