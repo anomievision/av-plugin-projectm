@@ -20,11 +20,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+
       - name: Use PNPM ${{ matrix.node-version }}
-        uses: pnpm/action-setup@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
+
       - run: pnpm install
       - run: pnpm test
 
@@ -34,11 +37,14 @@ jobs:
     needs: [quality]
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+
       - name: Use PNPM ${{ matrix.node-version }}
-        uses: pnpm/action-setup@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
+          
       - run: pnpm install && pnpm build
       - run: pnpm semantic-release
         env:
