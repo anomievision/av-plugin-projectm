@@ -2,6 +2,7 @@
   "name": "av-plugin-projectm",
   "version": "0.0.0-development",
   "description": "A module to provide controls for the ProjectM library",
+  "packageManager": "pnpm@7.4.0",
   "main": "lib/index.js",
   "module": "lib/index.m.js",
   "unpkg": "lib/index.umd.js",
